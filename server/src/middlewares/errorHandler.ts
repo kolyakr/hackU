@@ -7,10 +7,15 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
+  if (res.headersSent) {
+    return next(err);
+  }
+  console.log(err);
+
   if (isHttpError(err)) {
     res.status(err.status).json({
       status: err.status,
-      message: err.message,
+      errors: Object.values(err),
     });
   }
 

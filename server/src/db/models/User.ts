@@ -15,6 +15,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  points: {
+    type: Number,
+    default: 0,
+  },
 });
 
 userSchema.pre("save", async function (next) {

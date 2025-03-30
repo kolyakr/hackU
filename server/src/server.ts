@@ -52,6 +52,6 @@ export const startServer = () => {
 
   const PORT = env("PORT", 3000);
   app.listen(PORT, () => {
-    console.log(`Server id running on port ${PORT} in ${mode} mode`);
+    console.log(`Server is running on port ${PORT} in ${mode} mode`);
   });
 };

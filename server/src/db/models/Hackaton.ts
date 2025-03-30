@@ -23,4 +23,4 @@ const hackatonSchema = new Schema({
   },
 });
 
-export const Hackaton = model("projects", hackatonSchema);
+export const Hackaton = model("hackatons", hackatonSchema);
